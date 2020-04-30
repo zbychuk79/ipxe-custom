@@ -1,0 +1,3 @@
+#!ipxe
+dhcp
+chain --replace --autofree http://omv1:82/ipxe/setup.php
