@@ -1,5 +1,5 @@
 # ipxe-custom
-Moja konfiguracja iPXE.
+Pliki konfiguracyjne dla mojej wersji iPXE.
 
 ## ipxe-config
 
