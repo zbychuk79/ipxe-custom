@@ -1,7 +1,7 @@
 # ipxe-custom
 Moja konfiguracja iPXE.
 
-## config.h
+## ipxe-config
 
 Konfiguracja binarki iPXE.
 
