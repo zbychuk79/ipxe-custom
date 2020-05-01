@@ -3,7 +3,7 @@ Pliki konfiguracyjne dla mojej wersji iPXE.
 
 ## ipxe-config
 
-Konfiguracja binarki iPXE.
+Konfiguracja binarki iPXE. Plik ten to skonfigurowana przeze mnie wersja z [ipxe.org](https://ipxe.org/)
 
 ## zbychuk
 
