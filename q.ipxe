@@ -1,0 +1,3 @@
+#!ipxe
+dhcp
+chain --replace --autofree http://q:82/ipxe/setup.ipxe
