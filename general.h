@@ -57,7 +57,7 @@ FILE_LICENCE ( GPL2_OR_LATER_OR_UBDL );
 #define	DOWNLOAD_PROTO_HTTPS	/* Secure Hypertext Transfer Protocol */
 #undef	DOWNLOAD_PROTO_FTP	/* File Transfer Protocol */
 #undef	DOWNLOAD_PROTO_SLAM	/* Scalable Local Area Multicast */
-#undef	DOWNLOAD_PROTO_NFS	/* Network File System Protocol */
+#define	DOWNLOAD_PROTO_NFS	/* Network File System Protocol */
 //#undef DOWNLOAD_PROTO_FILE	/* Local filesystem access */
 
 /*
@@ -85,7 +85,7 @@ FILE_LICENCE ( GPL2_OR_LATER_OR_UBDL );
  * 802.11 cryptosystems and handshaking protocols
  *
  */
-#define	CRYPTO_80211_WEP	/* WEP encryption (deprecated and insecure!) */
+#undef	CRYPTO_80211_WEP	/* WEP encryption (deprecated and insecure!) */
 #define	CRYPTO_80211_WPA	/* WPA Personal, authenticating with passphrase */
 #define	CRYPTO_80211_WPA2	/* Add support for stronger WPA cryptography */
 
@@ -105,12 +105,12 @@ FILE_LICENCE ( GPL2_OR_LATER_OR_UBDL );
  */
 //#define	IMAGE_NBI		/* NBI image support */
 //#define	IMAGE_ELF		/* ELF image support */
-#define	IMAGE_MULTIBOOT		/* MultiBoot image support */
-#define	IMAGE_PXE		/* PXE image support */
-#define	IMAGE_SCRIPT		/* iPXE script image support */
+//#define	IMAGE_MULTIBOOT		/* MultiBoot image support */
+//#define	IMAGE_PXE		/* PXE image support */
+//#define	IMAGE_SCRIPT		/* iPXE script image support */
 //#define	IMAGE_BZIMAGE		/* Linux bzImage image support */
 //#define	IMAGE_COMBOOT		/* SYSLINUX COMBOOT image support */
-#define	IMAGE_EFI		/* EFI image support */
+//#define	IMAGE_EFI		/* EFI image support */
 //#define	IMAGE_SDI		/* SDI image support */
 //#define	IMAGE_PNM		/* PNM image support */
 #define	IMAGE_PNG		/* PNG image support */
@@ -126,12 +126,12 @@ FILE_LICENCE ( GPL2_OR_LATER_OR_UBDL );
 #define	CONFIG_CMD		/* Option configuration console */
 #define	IFMGMT_CMD		/* Interface management commands */
 #define	IWMGMT_CMD		/* Wireless interface management commands */
-#define IBMGMT_CMD		/* Infiniband management commands */
-#define FCMGMT_CMD		/* Fibre Channel management commands */
+//#define IBMGMT_CMD		/* Infiniband management commands */
+//#define FCMGMT_CMD		/* Fibre Channel management commands */
 #define	ROUTE_CMD		/* Routing table management commands */
 #define IMAGE_CMD		/* Image management commands */
 #define DHCP_CMD		/* DHCP management commands */
-#define SANBOOT_CMD		/* SAN boot commands */
+//#define SANBOOT_CMD		/* SAN boot commands */
 #define MENU_CMD		/* Menu commands */
 #define LOGIN_CMD		/* Login command */
 #define SYNC_CMD		/* Sync command */
