@@ -50,7 +50,7 @@ if [ "$download" = "yes" ]; then
 fi
 
 if [ "$compile" = "yes" ]; then
-                       cp ~/ipxe-custom/general.h ~/ipxe/src/config/general.h
+#                       cp ~/ipxe-custom/general.h ~/ipxe/src/config/general.h
     case $net in
         q )            cp ~/ipxe-custom/$net.ipxe ~/ipxe/src/embeded.ipxe
                                 ;;
