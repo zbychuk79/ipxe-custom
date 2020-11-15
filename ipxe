@@ -8,7 +8,6 @@ Jak używać: ipxe [ -d ] [ -c ... ] | [ -h ]
  -d ściągnij źródła
  -c kompiluj - jaki iPXE budować
            q: buduję go dla mojej domowej sieci LAN (serwer q).
-          o1: buduję go dla mojej domowej sieci LAN (serwer o1).
         omv1: buduję go dla mojej domowej sieci LAN (serwer omv1).
     internet: iPXE dla konfiguracji z poza sieci -z-.
 
