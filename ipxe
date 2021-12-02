@@ -53,8 +53,6 @@ if [ "$compile" = "yes" ]; then
     case $net in
         q )            cp ~/ipxe-custom/$net.ipxe ~/ipxe/src/embeded.ipxe
                                 ;;
-        o1 )           cp ~/ipxe-custom/$net.ipxe ~/ipxe/src/embeded.ipxe
-                                ;;
         omv1 )         cp ~/ipxe-custom/$net.ipxe ~/ipxe/src/embeded.ipxe
                                 ;;
         internet )     cp ~/ipxe-custom/$net.ipxe ~/ipxe/src/embeded.ipxe

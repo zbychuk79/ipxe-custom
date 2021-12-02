@@ -9,10 +9,6 @@ Konfiguracja binarki iPXE. Plik ten to skonfigurowana przeze mnie wersja z [ipxe
 
 Skrypt osadzony w iPXE dla mojej sieci LAN (serwer q).
 
-## o1.ipxe
-
-Skrypt osadzony w iPXE dla mojej sieci LAN (serwer o1).
-
 ## omv1.ipxe
 
 Skrypt osadzony w iPXE dla mojej sieci LAN (serwer omv1).
