@@ -38,37 +38,38 @@ while [ "$1" != "" ]; do
 done
 
 cd
-mkdir -p ipxe
-mkdir -p ipxe-image
+mkdir -p tmp/ipxe
+mkdir -p tmp/ipxe-image
 
 if [ "$download" = "yes" ]; then
-    rm -rf ipxe
+    cd tmp
+    rm -rf tmp/ipxe
     git clone git://git.ipxe.org/ipxe.git
-    rm -rf ipxe-custom
+    rm -rf tmp/ipxe-custom
     git clone https://github.com/zbychuk79/ipxe-custom.git
 fi
 
 if [ "$compile" = "yes" ]; then
-                       #cp ~/ipxe-custom/general.h ~/ipxe/src/config/general.h
+                       #cp ~/tmp/ipxe-custom/general.h ~/tmp/ipxe/src/config/general.h
     case $net in
-        q )            cp ~/ipxe-custom/$net.ipxe ~/ipxe/src/embeded.ipxe
+        q )            cp ~/tmp/ipxe-custom/$net.ipxe ~/tmp/ipxe/src/embeded.ipxe
                                 ;;
-        omv1 )         cp ~/ipxe-custom/$net.ipxe ~/ipxe/src/embeded.ipxe
+        omv1 )         cp ~/tmp/ipxe-custom/$net.ipxe ~/tmp/ipxe/src/embeded.ipxe
                                 ;;
-        internet )     cp ~/ipxe-custom/$net.ipxe ~/ipxe/src/embeded.ipxe
+        internet )     cp ~/tmp/ipxe-custom/$net.ipxe ~/tmp/ipxe/src/embeded.ipxe
                                 ;;
         * )            echo "
 Nie podałeś parametru -c [ q | o1 | omv1 | internet ]
 "
                        exit 0
     esac
-    mkdir -p ~/ipxe-image/$net
-    cd ~/ipxe/src
+    mkdir -p ~/tmp/ipxe-image/$net
+    cd ~/tmp/ipxe/src
     make clean
     make all EMBED=embeded.ipxe
     make bin-x86_64-efi/ipxe.efi EMBED=embeded.ipxe
-    cp bin/ipxe.lkrn bin/ipxe.usb bin/ipxe.iso bin/ipxe.dsk bin/ipxe.pxe bin-x86_64-efi/ipxe.efi ~/ipxe-image/$net
-    cp ~/ipxe/src/config/general.h ~/ipxe-image/$net/
-    cp embeded.ipxe ~/ipxe-image/$net/
-    cp $0 ~/ipxe-image/$net/
+    cp bin/ipxe.lkrn bin/ipxe.usb bin/ipxe.iso bin/ipxe.dsk bin/ipxe.pxe bin-x86_64-efi/ipxe.efi ~/tmp/ipxe-image/$net
+    cp ~/tmp/ipxe/src/config/general.h ~/tmp/ipxe-image/$net/
+    cp embeded.ipxe ~/tmp/ipxe-image/$net/
+    cp $0 ~/tmp/ipxe-image/$net/
 fi
