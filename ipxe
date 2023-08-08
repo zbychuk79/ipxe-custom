@@ -38,14 +38,14 @@ while [ "$1" != "" ]; do
 done
 
 cd
-mkdir -p tmp/ipxe
-mkdir -p tmp/ipxe-image
+mkdir -p ~/tmp/ipxe
+mkdir -p ~/tmp/ipxe-image
 
 if [ "$download" = "yes" ]; then
-    cd tmp
-    rm -rf tmp/ipxe
+    cd ~/tmp
+    rm -rf ipxe
     git clone git://git.ipxe.org/ipxe.git
-    rm -rf tmp/ipxe-custom
+    rm -rf ipxe-custom
     git clone https://github.com/zbychuk79/ipxe-custom.git
 fi
 
